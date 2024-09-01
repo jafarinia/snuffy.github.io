@@ -171,6 +171,49 @@ We introduce Snuffy architecture, a novel MIL-pooling method based on sparse tra
   </div>
 </section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified">
+          <p>
+            Snuffy architecture comprises two key components: <br>
+            <strong> 1) Self-Supervised Continual Pre-Training with PEFT:</strong> We leverage Parameter Efficient Fine Tuning (PEFT) in the pathology domain, utilizing the Adaptformer due to its effective design. <br>
+            <strong> 2) Snuffy MIL-Pooling Architecture:</strong> Inspired by the complexity of cancer biology and the tissue microenvironment's role in detection, we present the Snuffy MIL-pooling architecture. This architecture introduces a new sparsity pattern for sparse transformers.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Method. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Comparison. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Comparison</h2>
+        <div class="content has-text-justified">
+          <p>
+            There are two families within our architecture: <br>
+            <strong> Efficient Snuffy:</strong> Trained initially on a natural image dataset, followed by continued training with PEFT on whole-slide images (WSIs). <br>
+              <strong> Exhaustive Snuffy:</strong> Trained from scratch on WSIs.
+Both families utilize the Snuffy MIL-pooling architecture.
+          </p>
+          <img src="static/images/comparison.png" class="center">
+        <figcaption class="has-text-justified">Performance (AUC) vs. efficiency (size and time) trade off on CAMELYON16. Although the performance of Efficient Snuffy may be slightly inferior to Exhaustive Snuffy, both methods significantly outperform existing benchmarks in Region-of-Interest (ROI) detection and WSI
+          classification, setting a new state-of-the-art (SOTA)</figcaption>
+
+        </div>
+      </div>
+    </div>
+    <!--/ Comparison. -->
+  </div>
+</section>
+
 <!-- Visualization. -->
 <section class="section">
   <div class="container is-max-desktop">
